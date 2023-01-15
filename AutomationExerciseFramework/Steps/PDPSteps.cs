@@ -12,7 +12,14 @@ namespace AutomationExerciseFramework.Steps
         Utilites ut = new Utilites(Driver);
         HeaderPage hp = new HeaderPage(Driver);
 
-        internal ProductDetails ProductDetails { get; private set; }
+        private readonly ProductData productData;
+
+        public PDPSteps(ProductData productData)
+        {
+            this.productData = productData;
+        }
+
+       
 
         [Given(@"user opens products page")]
         public void GivenUserOpensProductsPage()
@@ -40,6 +47,7 @@ namespace AutomationExerciseFramework.Steps
         public void WhenUserClickOnAddToCartButton()
         {
             ProductDetails pd = new ProductDetails(Driver);
+            productData.ProductName = ut.ReturnTextFromElement(pd.prodName);
             ut.ClickOnElement(pd.addtocartBtn);
         }
         
@@ -50,11 +58,11 @@ namespace AutomationExerciseFramework.Steps
             ut.ClickOnElement(pd.viewcartBtn);
         }
         
-        [Then(@"shopping cart will be displayed with '(.*)' prouct inside")]
-        public void ThenShoppingCartWillBeDisplayedWithProuctInside(string pageFound)
+        [Then(@"shopping cart will be displayed with expected product inside")]
+        public void ThenShoppingCartWillBeDisplayedWithProuctInside()
         {
             CartPage cp = new CartPage(Driver);
-            Assert.True(ut.TextPresentInElement(pageFound), "Page NOT found");
+            Assert.True(ut.TextPresentInElement(productData.ProductName), "Page NOT found");
 
 
         }

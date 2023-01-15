@@ -12,7 +12,7 @@ namespace AutomationExerciseFramework.Pages
         public By prodDetInfo = By.ClassName("product-information");
         public By addtocartBtn = By.CssSelector(".btn-default.cart[type='button']");
         public By viewcartBtn = By.CssSelector(".text-center [href='/view_cart']");
-
+        public By prodName = By.XPath("//*[@class='product-information']//h2");
 
         public ProductDetails(IWebDriver driver)
         {
