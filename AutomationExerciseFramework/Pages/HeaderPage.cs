@@ -13,7 +13,12 @@ namespace AutomationExerciseFramework.Pages
         public By loginLink = By.ClassName("fa-lock");
         public By deleteAcc = By.ClassName("fa-trash-o");
         public By contactLink = By.ClassName("fa-envelope");
+<<<<<<< HEAD
+        public By productsLink = By.ClassName("card_travel");
+        public By cartLink = By.ClassName("fa-shopping-cart");
+=======
         public By product = By.ClassName("card_travel");
+>>>>>>> main
 
         public HeaderPage(IWebDriver driver)
         {

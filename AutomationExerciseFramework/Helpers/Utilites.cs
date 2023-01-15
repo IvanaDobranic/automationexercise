@@ -42,6 +42,11 @@ namespace AutomationExerciseFramework.Helpers
             return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(selector)).Displayed;
         }
 
+        internal void ClickOnElement(object addtocartBtn)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DropdownSelect(By select, string option)
         {
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
@@ -56,6 +61,12 @@ namespace AutomationExerciseFramework.Helpers
             By headline = By.XPath("//*[contains(text(), '" + text + "')]");
             var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
             return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(headline)).Displayed;
+        }
+
+        public string ReturnTextFromElement(By locator)
+        {
+            return _driver.FindElement(locator).GetAttribute("textContent");
+            //return _driver.FindElement(locator).Text;
         }
 
     }
