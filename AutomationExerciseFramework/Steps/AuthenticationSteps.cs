@@ -12,7 +12,7 @@ namespace AutomationExerciseFramework.Steps
         Utilites ut = new Utilites(Driver);
         HeaderPage hp = new HeaderPage(Driver);
 
-        [Given(@"user opens sign in page")]
+        [Given (@"user opens sign in page")]
         public void GivenUserOpensSignInPage()
         {
             ut.ClickOnElement(hp.loginLink);
@@ -87,5 +87,40 @@ namespace AutomationExerciseFramework.Steps
             ut.ClickOnElement(acp.continueBtn);
         }
 
+
+
+
+        [Given(@"user registers new account with '(.*)' name")]
+        public void GivenUserOpensSignInPage(string name)
+        {
+            GivenUserOpensSignInPage();
+            GivenEntersNameAndValidEmailAdress(name);
+            GivenUserCliksOnSignUpButton();
+            WhenUserFillsInAllRequiredFields();
+            WhenSubmitsTheSignupForm();
+            AccountCreatedPage acp = new AccountCreatedPage(Driver);
+            ut.ClickOnElement(acp.continueBtn);
+        }
+
+        [When(@"user selects option for deleting the account")]
+        public void WhenUserSelectsOptionForDeletingTheAccount()
+        {
+            HeaderPage hp = new HeaderPage(Driver);
+            ut.ClickOnElement(hp.deleteAcc);
+        }
+
+        [Then(@"account will be deleted with '(.*)' message")]
+        public void ThenAccountWillBeDeletedWithMessage(string message)
+        {
+            AccountDeletedPage adp = new AccountDeletedPage(Driver);
+            Assert.True(ut.TextPresentInElement(message), "Failed to Delete Account!");
+            ut.ClickOnElement(adp.contDelBtn);
+        }
+
     }
-}
+
+    
+
+
+    }
+

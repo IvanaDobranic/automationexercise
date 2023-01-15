@@ -42,6 +42,11 @@ namespace AutomationExerciseFramework.Helpers
             return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(selector)).Displayed;
         }
 
+        internal void ClickOnElement(object addtocartBtn)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DropdownSelect(By select, string option)
         {
             WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(15));
