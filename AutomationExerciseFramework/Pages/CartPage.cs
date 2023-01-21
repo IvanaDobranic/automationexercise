@@ -11,6 +11,8 @@ namespace AutomationExerciseFramework.Pages
         public IWebDriver _driver;
         public By cartLink = By.ClassName("fa-shopping-cart");
         public By insidecart = By.CssSelector("cart_description h4 a[href='/product_details/5']");
+        public By wiewItempic = By.CssSelector("[href='/product_details/5']");
+        public By proceedBtn = By.CssSelector("btn.check_out");
 
         public CartPage(IWebDriver driver)
         {

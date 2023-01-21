@@ -20,23 +20,23 @@ namespace AutomationExerciseFramework.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ContactUs")]
-    public partial class ContactUsFeature
+    [NUnit.Framework.DescriptionAttribute("CheckOut")]
+    public partial class CheckOutFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "ContactUs.feature"
+#line 1 "CheckOut.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "ContactUs", "\tAs a user\r\n\tI want to be able to work with Contact Us section\r\n\tSo I can message" +
-                    " custormer support", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CheckOut", "\tAs a user \r\n\tI want to be able to add product to cart\r\n\tSo I can successfully ma" +
+                    "ke a purchase", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,14 +75,14 @@ namespace AutomationExerciseFramework.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User can send message via contact us form")]
+        [NUnit.Framework.DescriptionAttribute("User can place an order for purchase")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public void UserCanSendMessageViaContactUsForm()
+        public void UserCanPlaceAnOrderForPurchase()
         {
             string[] tagsOfScenario = new string[] {
                     "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can send message via contact us form", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User can place an order for purchase", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -94,7 +94,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
-testRunner.Given("user opens products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user opens products page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
   testRunner.And("searches for \'Winter Top\' term", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -107,6 +107,27 @@ testRunner.Given("user opens products page", ((string)(null)), ((TechTalk.SpecFl
 #line hidden
 #line 12
   testRunner.And("proceeds to cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 13
+  testRunner.And("shopping cart will be displayed with expected product inside", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 14
+  testRunner.And("user click on \'Proceed To Checkout\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 15
+  testRunner.And("user add comment about order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 16
+  testRunner.And("click on \'Place Order\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 17
+  testRunner.And("user fills all required fields", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 18
+  testRunner.And("user click on \'Pay and Confirm Order\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 19
+  testRunner.Then("user will successfully place an order", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

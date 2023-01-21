@@ -109,7 +109,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.And("proceeds to cart", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 13
- testRunner.Then("shopping cart will be displayed with \'Winter Top\' prouct inside", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("shopping cart will be displayed with expected product inside", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

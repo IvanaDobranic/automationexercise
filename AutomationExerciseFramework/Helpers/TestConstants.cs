@@ -20,8 +20,18 @@ namespace AutomationExerciseFramework.Helpers
         public const string ZipCode = "10010";
         public const string Phone = "0800100100";
 
+        //comment box placing order
+        public const string commBox = "Kupi";
+
         //contact us data
         public const string Subject = "Request";
         public const string Message = "Would you be able to remove all ads from your website please?";
+
+        //payment data
+        public const string NameonCard = "Marko Manic";
+        public const string CardNumber = "4111111111111111";
+        public const string CVC = "123";
+        public const string ExpirationM = "06";
+        public const string ExpirationY = "2023";
     }
 }
