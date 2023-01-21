@@ -30,3 +30,7 @@ AutomationExerciseFramework/obj/Release/netcoreapp3.1/AutomationExerciseFramewor
 =======
 >>>>>>> 04e189ec8f1cbdaa47aa6465b80537cb1eb09407
 >>>>>>> development
+*.v2
+*.dll
+*.pdb
+*.tmp

@@ -5,8 +5,8 @@
 
 @mytag
 Scenario: User can send message via contact us form
-Given user opens contact us page
-When user enters all required fields
-	And user submits contact us form
-	And confirms the propt message
-Then user will receive 'Success! Your details have been submitted successfully.' message
+Given user opens products page
+		And searches for 'Winter Top' term
+		And opens first search result
+	When user click on Add to Cart button
+		And proceeds to cart
