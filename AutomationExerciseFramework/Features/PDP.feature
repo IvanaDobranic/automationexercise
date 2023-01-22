@@ -12,3 +12,12 @@ Scenario: User can add product to cart
 		And proceeds to cart
 	Then shopping cart will be displayed with expected product inside
 
+
+	Scenario: User can submit a rewiew on any product
+		Given user opens products page
+		And searches for 'Winter Top' term
+		And opens first search result
+		When user fill Youre Name, Email Address and Add Review Here fields
+		And click on Submit button
+		Then User get message that his successfully submited Review
+

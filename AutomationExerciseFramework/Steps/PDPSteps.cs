@@ -62,10 +62,35 @@ namespace AutomationExerciseFramework.Steps
             CartPage cp = new CartPage(Driver);
             Assert.True(ut.TextPresentInElement(productData.ProductName), "Page NOT found");
 
+        }
 
 
-        
+
+
+        [When(@"user fill Youre Name, Email Address and Add Review Here fields")]
+        public void WhenUserFillYoureNameEmailAddressAndAddReviewHereFields()
+        {
+            ProductDetails pd = new ProductDetails(Driver);
+            ut.EnterTextInElement(pd.yourName, TestConstants.YourName);
+            ut.EnterTextInElement(pd.emaiAdd, TestConstants.EmailAddress);
+            ut.EnterTextInElement(pd.addRevF, TestConstants.AddReviewHere);
+        }
+
+        [When(@"click on Submit button")]
+        public void WhenClickOnSubmitButton()
+        {
+            ProductDetails pd = new ProductDetails(Driver);
+            ut.ClickOnElement(pd.subbtn);
+        }
+
+        [Then(@"User get message that his successfully submited Review")]
+        public void ThenUserGetMessageThatHisSuccessfullySubmitedReview()
+        {
+            ProductDetails pd = new ProductDetails(Driver);
+            Assert.True(ut.ElementIsDisplayed(pd.confmess));
 
         }
+
+
     }
 }

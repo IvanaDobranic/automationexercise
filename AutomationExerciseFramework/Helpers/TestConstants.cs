@@ -27,11 +27,18 @@ namespace AutomationExerciseFramework.Helpers
         public const string Subject = "Request";
         public const string Message = "Would you be able to remove all ads from your website please?";
 
-        //payment data
+        //payment data details
         public const string NameonCard = "Marko Manic";
         public const string CardNumber = "4111111111111111";
         public const string CVC = "123";
         public const string ExpirationM = "06";
         public const string ExpirationY = "2023";
+
+
+        //review data
+        public const string YourName = "Ivana";
+        public const string EmailAddress = "dobranicivana87@gmail.com";
+        public const string AddReviewHere = "Naruceno sve";
+
     }
 }

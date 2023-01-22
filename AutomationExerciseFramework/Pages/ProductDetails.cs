@@ -13,6 +13,12 @@ namespace AutomationExerciseFramework.Pages
         public By addtocartBtn = By.CssSelector(".btn-default.cart[type='button']");
         public By viewcartBtn = By.CssSelector(".text-center [href='/view_cart']");
         public By prodName = By.XPath("//*[@class='product-information']//h2");
+        public By yourName = By.Id("name");
+        public By emaiAdd = By.Id("email");
+        public By addRevF = By.Id("review");
+        public By subbtn = By.Id("button-review");
+        public By confmess = By.XPath("//*[@class='form-row']//span");
+
 
         public ProductDetails(IWebDriver driver)
         {
